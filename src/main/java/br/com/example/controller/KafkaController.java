@@ -58,9 +58,27 @@ public class KafkaController {
         return "Success";
     }
 
+    @PostMapping(value = "/send/screening_satu")
+    public String send_screening_satu(@RequestBody String body) {
+        topicProducer.send_screening_satu(body);
+        return "Success";
+    }
+
+    @PostMapping(value = "/send/tele_survey")
+    public String send_tele_survey(@RequestBody String body) {
+        topicProducer.send_tele_survey(body);
+        return "Success";
+    }
+
     @PostMapping(value = "/send/screening_dua")
     public String send_screening_dua(@RequestBody String body) {
         topicProducer.send_screening_dua(body);
+        return "Success";
+    }
+
+    @PostMapping(value = "/send/result_pre_ppd")
+    public String send_result_pre_ppd(@RequestBody String body) {
+        topicProducer.send_result_pre_ppd(body);
         return "Success";
     }
 
@@ -88,9 +106,21 @@ public class KafkaController {
         return "Success";
     }
 
-    @PostMapping(value = "/send/tele_survey")
-    public String send_tele_survey(@RequestBody String body) {
-        topicProducer.send_tele_survey(body);
+    @PostMapping(value = "/send/overtime_process")
+    public String send_overtime_process(@RequestBody String body) {
+        topicProducer.send_overtime_process(body);
+        return "Success";
+    }
+
+    @PostMapping(value = "/send/entry_manual_2")
+    public String send_entrymanual2(@RequestBody String body) {
+        topicProducer.send_entrymanual2(body);
+        return "Success";
+    }
+
+    @PostMapping(value = "/send/confirm_docver")
+    public String send_confirm_docver(@RequestBody String body) {
+        topicProducer.send_confirm_docver(body);
         return "Success";
     }
 
@@ -106,9 +136,21 @@ public class KafkaController {
         return "Success";
     }
 
+    @PostMapping(value = "/send/cancel_todolist")
+    public String send_cancel_todolist(@RequestBody String body) {
+        topicProducer.send_cancel_todolist(body);
+        return "Success";
+    }
+
     @PostMapping(value = "/send/return_request_approve")
     public String send_return_request_approve(@RequestBody String body) {
         topicProducer.send_return_request_approve(body);
+        return "Success";
+    }
+
+    @PostMapping(value = "/send/result_ppd_livin")
+    public String send_result_ppd_livin(@RequestBody String body) {
+        topicProducer.send_result_ppd_livin(body);
         return "Success";
     }
 
